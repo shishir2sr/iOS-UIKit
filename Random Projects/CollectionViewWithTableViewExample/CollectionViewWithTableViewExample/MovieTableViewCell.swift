@@ -9,6 +9,8 @@ class MovieTableViewCell: UITableViewCell {
         super.awakeFromNib()
         movieCollectionView.dataSource = self
         movieCollectionView.delegate = self
+        
+        let layout = UICollectionViewLayout()
     }
 }
 
@@ -24,21 +26,17 @@ extension MovieTableViewCell: UICollectionViewDataSource{
         let collectionViewCell = movieCollectionView.dequeueReusableCell(withReuseIdentifier: "collectionviewcell", for: indexPath) as! MovieCollectionViewCell
         
         collectionViewCell.movieImage.image = UIImage(named: movieList[indexPath.row])
+        collectionViewCell.movieImage.layer.cornerRadius = 8
         
         return collectionViewCell
     }
-    
-    
 }
+
 
 extension MovieTableViewCell: UICollectionViewDelegate{
     
 }
 
-
-extension MovieCollectionViewCell: UICollectionViewFlowLayout{
+extension MovieTableViewCell: UICollectionViewDelegateFlowLayout{
     
 }
-
-
-
