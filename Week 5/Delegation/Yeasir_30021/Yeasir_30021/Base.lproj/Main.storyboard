@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="Yeasir_30021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o-illusion" translatesAutoresizingMaskIntoConstraints="NO" id="ksM-8d-ZWs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="448"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jk-dM-7f5">
+                                <rect key="frame" x="155.5" y="527" width="103.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mood">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="baseBackgroundColor" red="0.12713292239999999" green="0.14444184299999999" blue="0.32924708720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="6Xl-ir-vCo" kind="show" identifier="MainViewControllerToSecondViewController" id="BXE-61-DuK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Jk-dM-7f5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mn6-vq-eJS"/>
+                            <constraint firstItem="ksM-8d-ZWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U2R-Mk-zmu"/>
+                            <constraint firstItem="6Jk-dM-7f5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="XJ2-i1-9NP"/>
+                            <constraint firstItem="ksM-8d-ZWs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kn6-rp-QTF"/>
+                            <constraint firstItem="ksM-8d-ZWs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tO9-uR-B9W"/>
+                            <constraint firstItem="6Jk-dM-7f5" firstAttribute="top" secondItem="ksM-8d-ZWs" secondAttribute="bottom" constant="35" id="upz-4w-ENh"/>
+                            <constraint firstItem="ksM-8d-ZWs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="wRL-pT-31b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ksM-8d-ZWs" id="B9D-YN-VyM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+        <!--Button View Controller-->
+        <scene sceneID="F8s-Mf-Kdd">
+            <objects>
+                <viewController id="6Xl-ir-vCo" customClass="ButtonViewController" customModule="Yeasir_30021" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qqp-i0-fUC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXV-z9-LBL">
+                                <rect key="frame" x="103.5" y="396" width="207" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wBl-Dv-WC7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Fire">
+                                    <color key="baseBackgroundColor" red="0.42400664090000001" green="0.11246865239999999" blue="0.074034996330000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editTheImage:" destination="6Xl-ir-vCo" eventType="touchUpInside" id="MhY-oy-y3P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcc-qA-184">
+                                <rect key="frame" x="103.5" y="509" width="207" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cool"/>
+                                <connections>
+                                    <action selector="ssecondButton:" destination="6Xl-ir-vCo" eventType="touchUpInside" id="kpP-tB-8fk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HE7-D2-d1J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rcc-qA-184" firstAttribute="top" secondItem="mXV-z9-LBL" secondAttribute="bottom" constant="63" id="ACy-Ag-8Dh"/>
+                            <constraint firstItem="mXV-z9-LBL" firstAttribute="width" secondItem="qqp-i0-fUC" secondAttribute="width" multiplier="0.5" id="Mi0-Mh-g9R"/>
+                            <constraint firstItem="rcc-qA-184" firstAttribute="width" secondItem="mXV-z9-LBL" secondAttribute="width" id="TQv-k4-z89"/>
+                            <constraint firstItem="rcc-qA-184" firstAttribute="height" secondItem="mXV-z9-LBL" secondAttribute="height" id="Tb6-eV-nSs"/>
+                            <constraint firstItem="mXV-z9-LBL" firstAttribute="centerX" secondItem="qqp-i0-fUC" secondAttribute="centerX" id="h1s-t1-eFm"/>
+                            <constraint firstItem="rcc-qA-184" firstAttribute="centerX" secondItem="qqp-i0-fUC" secondAttribute="centerX" id="vdo-ht-EWg"/>
+                            <constraint firstItem="mXV-z9-LBL" firstAttribute="centerY" secondItem="qqp-i0-fUC" secondAttribute="centerY" id="wSV-yP-pCm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Svh-dY-GtH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahF-er-PBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808" y="83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="o-illusion" width="273" height="196"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
