@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  Yeasir_30021
-//
-//  Created by bjit on 9/12/22.
-//
+
 
 import UIKit
 
