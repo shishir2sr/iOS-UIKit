@@ -42,6 +42,7 @@ class AddTransactionVC: UIViewController {
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle =  .medium
             dateFormatter.timeStyle = .none
+            
             let formattedDate = dateFormatter.string(from: transactionDate.date)
             
             if delegate?.tobeAdd == true{

@@ -28,7 +28,6 @@ class ViewController: UIViewController {
                 
                 if tobeAdd{
                     
-                    
 
                 }else{
                     destination.editData = updateData
@@ -144,7 +143,7 @@ extension ViewController: UITableViewDelegate{
     func handleEditAction(indexPath: IndexPath){
         tobeAdd = false
         let selectedRow = indexPath.row
-        updateData = transactions[selectedRow]
+        updateData = transactions[selectedRow] // Expense
         performSegue(withIdentifier: "mysegue", sender: self)
     }
     
